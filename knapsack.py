@@ -4,12 +4,9 @@ vals = [0,2,2,4,5,3]
 wts = [0,3,1,3,4,2]
 capacity = 7
 
-
 #creating the table
 width, height = capacity + 1, len(vals)
 table = [[0 for i in range(width)] for j in range(height)]
-
-
 
 #populate the table 
 for row in range(height):
@@ -21,7 +18,6 @@ for row in range(height):
         else:
             table[row][column] = table[row-1][column]
     
-
 
 #to print the table like table
 list_as_array = np.array(table)
