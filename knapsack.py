@@ -21,6 +21,8 @@ for row in range(height):
         else:
             table[row][column] = table[row-1][column]
     
+
+
 #to print the table like table
 list_as_array = np.array(table)
 print(list_as_array)
