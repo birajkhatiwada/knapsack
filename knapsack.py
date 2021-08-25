@@ -22,3 +22,18 @@ for row in range(height):
 #to print the table like table
 list_as_array = np.array(table)
 print(list_as_array)
+
+
+
+#bactracking and finding the optimal path
+row, column = height-1, capacity
+arr=[]
+
+while row != 0 and column != 0:
+    print(table[row][column])
+    if(table[row][column]!=table[row-1][column]):
+        arr.append(row)
+        column = column-wts[row]
+    row = row-1
+
+print(arr)
